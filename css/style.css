@@ -2,7 +2,13 @@
 :root {
     --main-color: #00c6fc;
     --main-color-trans: #00c5fc83;
-    --transition-duration: 0.3s;
+    --section-padding: 90px;
+    --content-margin: 50px;
+}
+@media (max-width: 551px) {
+    :root {
+        --section-padding: 30px;
+    }
 }
 /* global rules */
 * {
@@ -16,13 +22,16 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    min-height: 1000vh;
+    min-height: 100vh;
 }
 ul {
     list-style: none;
 }
 a {
     text-decoration: none;
+}
+p {
+    line-height: 1.7;
 }
 .container {
     width: 100%;
@@ -58,11 +67,69 @@ a {
 }
 /* ---- */
 /* components */
-.landing .overlay {
+.overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0 0 0 / 60%);
+    background-color: rgba(0 0 0 / 50%);
+}
+.main-heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-transform: capitalize;
+}
+.main-heading h2 {
+    color: #333;
+    font-weight: normal;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+}
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -21px;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 2px;
+    background-color: #333;
+}
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -29.5px;
+    width: 15px;
+    aspect-ratio: 1;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+.main-heading p {
+    color: #777;
+    max-width: 600px;
+}
+/* ---- */
+/* scroll to top */
+.scroll-to-top {
+    color: white;
+    background-color: #3797c0;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    font-size: 20px;
 }
 /* ---- */
 /* header bar */
@@ -165,10 +232,6 @@ header nav .burger-menu {
     background: var(--main-color) url(../images/landing.jpg) center / cover;
     height: 100vh;
 }
-.landing .container {
-    position: relative;
-    height: 100vh;
-}
 .landing .content {
     display: flex;
     justify-content: flex-end;
@@ -180,6 +243,7 @@ header nav .burger-menu {
     color: white;
     padding: 50px;
     line-height: 1.5;
+    backdrop-filter: blur(2px);
 }
 .landing .content .text {
     flex-basis: 630px;
@@ -214,15 +278,15 @@ header nav .burger-menu {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    animation: infinite 1s alternate-reverse;
+    animation: infinite 1s alternate;
 }
 .arrow-left {
     animation-name: arrow-left;
-    left: 0
+    left: 40px
 }
 .arrow-right {
     animation-name: arrow-right;
-    right: 0
+    right: 40px
 }
 @keyframes arrow-left {
     from {
@@ -260,3 +324,173 @@ header nav .burger-menu {
 }
 /* ---- */
 /* services section */
+.services {
+    padding: var(--section-padding);
+}
+.services .srv-content {
+    margin-top: var(--content-margin);
+}
+@media (min-width: 768px) {
+    .services .srv-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        column-gap: 100px;
+        row-gap: 30px;
+    }
+    .services .srv-content .card {
+        margin-bottom: 0;
+    }
+    .services .srv-content .card i {
+        margin-right: 60px;
+    }
+}
+@media (max-width: 767px) {
+    .services .srv-content .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services .srv-content .card h2,
+    .services .srv-content .card p {
+        text-align: center;
+    }
+    .services .srv-content .card i {
+        margin-bottom: 15px;
+    }
+}
+.services .srv-content .card i {
+    color: #c4c4c4;
+}
+.services .srv-content .card {
+    display: flex;
+    margin-bottom: 30px;
+}
+.services .srv-content .card h2 {
+    color: var(--main-color);
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.services .srv-content .card p {
+    color: #777;
+}
+/* ---- */
+/* design section */
+.design {
+    background: url(../images/features.jpg) center / cover;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+}
+.design img {
+    position: absolute;
+    bottom: -56px;
+    right: 60%;
+}
+.design .text {
+    color: white;
+    background-color: var(--main-color-trans);
+    width: 54%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px;
+}
+.design .text h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 35px;
+    letter-spacing: -1px;
+}
+.design .text p {
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+.design .text .card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .design img {
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .design .text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+    }
+}
+/* ----- */
+/* portofolio section */
+.portofolio {
+    padding-top: var(--section-padding);
+    padding-bottom: 50px;
+}
+.portofolio ul.shuffle {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.portofolio ul.shuffle li {
+    padding: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+}
+.portofolio ul.shuffle li.active,
+.portofolio ul.shuffle li:hover {
+    background: var(--main-color);
+    color: white;
+}
+/* the images */
+.portofolio .content {
+    margin-top: var(--content-margin);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.portofolio .content .card {
+    position: relative;
+    overflow: hidden;
+}
+.portofolio .content .card:hover img {
+    transform: scale(1.1) rotate(1deg);
+}
+.portofolio .content .card:hover .caption {
+    top: auto;
+    transform: translateY(-100%);
+}
+.portofolio .content .card img {
+    width: 100%;
+    transition: .3s;
+}
+.portofolio .content .card .caption {
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    padding: 15px;
+    transition: .3s;
+    width: 100%;
+}
+.portofolio .content .card .caption h4 {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.portofolio div.more {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.portofolio div a.more {
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+
+}
