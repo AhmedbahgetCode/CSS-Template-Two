@@ -251,7 +251,7 @@ header nav .burger-menu {
 .landing .content .text h1 {
     text-transform: capitalize;
 }
-.landing .content .text p{
+.landing .content .text p {
     margin-top: -20px;
 }
 @media (max-width: 768px) {
@@ -462,7 +462,7 @@ header nav .burger-menu {
 }
 .portofolio .content .card:hover .caption {
     top: auto;
-    transform: translateY(-100%);
+    transform: translateY(-98%);
 }
 .portofolio .content .card img {
     width: 100%;
@@ -481,16 +481,55 @@ header nav .burger-menu {
     text-transform: uppercase;
     font-weight: normal;
 }
-.portofolio div.more {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-.portofolio div a.more {
+.portofolio a.more {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0 auto;
     color: white;
     background-color: var(--main-color);
     padding: 10px;
     text-transform: uppercase;
     font-size: 18px;
-
 }
+/* ---- */
+/* awesome video section */
+.awesome {
+    max-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.awesome video {
+    max-width: 100%;
+}
+.awesome .text {
+    background-color: var(--main-color-trans);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+@media (max-width: 375px) {
+    .awesome .text {
+        height: 100%;
+    }
+}
+.awesome .text h3 {
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.awesome .text a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: block;
+    width: fit-content;
+    margin: 10px auto 0 auto;
+}
+/* ---- */
+/* about us section */
