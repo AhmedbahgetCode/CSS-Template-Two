@@ -69,6 +69,8 @@ p {
 /* components */
 .overlay {
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0 0 0 / 50%);
@@ -499,7 +501,7 @@ header nav .burger-menu {
     overflow: hidden;
 }
 .awesome video {
-    max-width: 100%;
+    min-width: 100%;
 }
 .awesome .text {
     background-color: var(--main-color-trans);
@@ -510,6 +512,10 @@ header nav .burger-menu {
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 30px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-transform: uppercase;
 }
@@ -533,3 +539,65 @@ header nav .burger-menu {
 }
 /* ---- */
 /* about us section */
+.about {
+    padding-top: var(--section-padding);
+}
+.about .content {
+    background: url(../images/stats.png) center / cover;
+    min-height: 500px;
+    margin-top: 300px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .about .content {
+        margin-top: 40px;
+    }
+}
+.about .content img {
+    position: absolute;
+    z-index: -1;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+@media (min-width: 768px) {
+    .about .content img {
+        display: inline-block;
+    }
+}
+.about .content .container {
+    background-color: var(--main-color-trans);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  center;
+    padding: 15px 0;
+}
+.about .content .container  div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+.about .content .container div i {
+    background-color: #333;
+    padding: 10px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.about .content .container div h1 {
+    margin: 10px 0;
+}
+.about .content .container div p {
+    font-size: 15px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+.about .content .container > * {
+    flex: 1 0;
+}
