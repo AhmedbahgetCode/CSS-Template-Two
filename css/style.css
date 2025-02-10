@@ -452,12 +452,12 @@ header nav .burger-menu {
 .portofolio .content {
     margin-top: var(--content-margin);
     display: grid;
-    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .portofolio .content .card {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 3 / 2;
 }
 .portofolio .content .card:hover img {
     transform: scale(1.1) rotate(1deg);
