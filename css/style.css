@@ -576,13 +576,15 @@ header nav .burger-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content:  center;
+    color: white;
     padding: 15px 0;
 }
-.about .content .container  div {
-    color: white;
+.about .content .container > div {
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
     padding: 25px;
 }
 .about .content .container div i {
@@ -597,7 +599,4 @@ header nav .burger-menu {
     font-size: 15px;
     white-space: nowrap;
     text-transform: capitalize;
-}
-.about .content .container > * {
-    flex: 1 0;
 }
