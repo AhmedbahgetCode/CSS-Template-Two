@@ -16,7 +16,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "work sans";
+    font-family: "work sans", cairo;
 }
 html {
     scroll-behavior: smooth;
@@ -458,18 +458,16 @@ header nav .burger-menu {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3 / 2;
+    cursor: pointer;
 }
 .portofolio .content .card:hover img {
     transform: scale(1.1) rotate(1deg);
-}
-.portofolio .content .card:hover .caption {
-    top: auto;
-    transform: translateY(-98%);
 }
 .portofolio .content .card img {
     width: 100%;
     transition: .3s;
 }
+/* caption */
 .portofolio .content .card .caption {
     position: absolute;
     top: 100%;
@@ -478,15 +476,46 @@ header nav .burger-menu {
     transition: .3s;
     width: 100%;
 }
+.portofolio .content .card:hover .caption {
+    top: auto;
+    transform: translateY(-98%);
+}
 .portofolio .content .card .caption h4 {
     color: var(--main-color);
     text-transform: uppercase;
     font-weight: normal;
 }
+/* add more */
+.portofolio .content .card a {
+    color: white;
+    background-color: #00c6fcc9;
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+.portofolio .content .card:hover a {
+    transform: translate(-50%, -70%) scale(-1);
+    visibility: visible;
+    opacity: 1;
+}
 .portofolio a.more {
     display: block;
     width: fit-content;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0;
     color: white;
     background-color: var(--main-color);
     padding: 10px;
@@ -577,7 +606,6 @@ header nav .burger-menu {
     flex-wrap: wrap;
     justify-content:  center;
     color: white;
-    padding: 15px 0;
 }
 .about .content .container > div {
     min-width: 250px;
@@ -585,7 +613,7 @@ header nav .burger-menu {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    padding: 25px;
+    padding: 25px 0;
 }
 .about .content .container div i {
     background-color: #333;
