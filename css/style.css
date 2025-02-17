@@ -458,10 +458,9 @@ header nav .burger-menu {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3 / 2;
-    cursor: pointer;
 }
 .portofolio .content .card:hover img {
-    transform: scale(1.1) rotate(1deg);
+    transform: scale(1.2) rotate(3deg);
 }
 .portofolio .content .card img {
     width: 100%;
@@ -477,8 +476,7 @@ header nav .burger-menu {
     width: 100%;
 }
 .portofolio .content .card:hover .caption {
-    top: auto;
-    transform: translateY(-98%);
+    transform: translateY(-100%);
 }
 .portofolio .content .card .caption h4 {
     color: var(--main-color);
@@ -490,7 +488,6 @@ header nav .burger-menu {
     color: white;
     background-color: #00c6fcc9;
     
-    visibility: hidden;
     opacity: 0;
     transition: .3s;
 
@@ -505,11 +502,10 @@ header nav .burger-menu {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -85%) scale(0);
 }
 .portofolio .content .card:hover a {
-    transform: translate(-50%, -70%) scale(-1);
-    visibility: visible;
+    transform: translate(-50%, -85%) scale(1);
     opacity: 1;
 }
 .portofolio a.more {
