@@ -624,3 +624,136 @@ header nav .burger-menu {
     white-space: nowrap;
     text-transform: capitalize;
 }
+/* --- */
+/* clintes section */
+.clintes {
+    padding-block: var(--section-padding);
+}
+.clintes .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.clintes .container > div {
+    flex: 1 1 400px; /* Ensures items grow but don’t exceed 250px */
+    max-width: 500px; /* Prevents items from growing too large */
+}
+.clintes .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.clintes .title h2 {
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.clintes .title p {
+    color: #777;
+    font-size: 15px;
+}
+.clintes .testimonials .card {
+    display: flex;
+    margin-bottom: 30px;
+    color: #333;
+}
+.clintes .testimonials .card .content {
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+}
+.clintes .testimonials .card p.sayer {
+    color: #777;
+    font-size: 15px;
+    text-transform: capitalize;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.clintes .testimonials .card img {
+    margin-right: 40px;
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+@media (max-width: 540px) {
+    .clintes .testimonials .card {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+    }
+    .clintes .testimonials .card .content {
+        position: static;
+    }
+    .clintes .testimonials .card img {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .clintes .testimonials .card p.sayer {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 10%);
+    }
+    .clintes .testimonials .card p {
+        padding: 10px;
+    }
+}
+/* skills */
+.clintes .skills .card {
+    margin-bottom: 15px;
+}
+.clintes .skills .card p {
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.clintes .skills .card > div {
+    height: 20px;
+    background-color: #dddcdc8f;
+    position: relative;
+}
+.clintes .skills .card > div::before {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    height: 100%;
+    width: 80%;
+}
+.clintes .skills .card > div::after {
+    content: attr(data-width);
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 13px;
+    position: absolute;
+    left: 76%;
+    top: -170%;
+}
+.clintes .skills .card:nth-child(3) > div::before {
+    width: 75%;
+}
+.clintes .skills .card:nth-child(3) > div::after {
+    left: 71%;
+}
+.clintes .skills .card:nth-child(3) .arrow {
+    left: 73.6%;
+}
+.clintes .skills .card:nth-child(4) > div::before {
+    width: 67%;
+}
+.clintes .skills .card:nth-child(4) > div::after {
+    left: 63%;
+}
+.clintes .skills .card:nth-child(4) .arrow {
+    left: 65.6%;
+}
+.clintes .skills .card > div .arrow {
+    position: absolute;
+    left: 78.8%;
+    top: -50%;
+    border: 5px solid transparent;
+    border-top-color: black;
+}
