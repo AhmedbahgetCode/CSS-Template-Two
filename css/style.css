@@ -67,6 +67,20 @@ p {
 }
 /* ---- */
 /* components */
+ul.ballets {
+    display: flex;
+    column-gap: 5px;
+}
+ul.ballets li {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1.5px solid rgb(160, 160, 160);
+}
+ul.ballets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
 .overlay {
     position: absolute;
     left: 0;
@@ -116,7 +130,6 @@ p {
     color: #777;
     max-width: 600px;
 }
-/* ---- */
 /* scroll to top */
 .scroll-to-top {
     color: white;
@@ -312,17 +325,6 @@ header nav .burger-menu {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-}
-.landing > ul li {
-    display: inline-block;
-    width: 20px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 1.5px solid white;
-}
-.landing > ul li.active {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
 }
 /* ---- */
 /* services section */
@@ -662,21 +664,21 @@ header nav .burger-menu {
 }
 .clintes .testimonials .card .content {
     border-bottom: 1px solid #cccccc;
-    position: relative;
 }
 .clintes .testimonials .card p.sayer {
     color: #777;
     font-size: 15px;
     text-transform: capitalize;
-    position: absolute;
-    right: 0;
-    text-align: center;
+    text-align: end;
 }
 .clintes .testimonials .card img {
     margin-right: 40px;
     width: 100px;
     aspect-ratio: 1;
     border-radius: 50%;
+}
+.clintes .testimonials ul {
+    justify-content: center;
 }
 @media (max-width: 540px) {
     .clintes .testimonials .card {
@@ -685,20 +687,21 @@ header nav .burger-menu {
         position: relative;
         text-align: center;
     }
-    .clintes .testimonials .card .content {
-        position: static;
-    }
     .clintes .testimonials .card img {
         margin-right: 0;
         margin-bottom: 50px;
     }
     .clintes .testimonials .card p.sayer {
+        position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 10%);
+        transform: translate(-50%, -5%);
     }
     .clintes .testimonials .card p {
         padding: 10px;
+    }
+    .clintes .testimonials .card p.discribe {
+        padding-bottom: 30px;
     }
 }
 /* skills */
@@ -756,4 +759,29 @@ header nav .burger-menu {
     top: -50%;
     border: 5px solid transparent;
     border-top-color: black;
+}
+/* ----- */
+/* qoute */
+.qoute {
+    position: relative;
+    background: url(../images/qoute.jpg) no-repeat center / cover;
+    height: 250px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.qoute .container {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}
+.qoute p {
+    font-size: 15px;
+    text-transform: capitalize;
 }
