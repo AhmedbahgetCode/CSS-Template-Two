@@ -785,3 +785,6 @@ header nav .burger-menu {
     font-size: 15px;
     text-transform: capitalize;
 }
+.qoute q {
+        line-height: 1.5;
+}
