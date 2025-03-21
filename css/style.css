@@ -792,3 +792,62 @@ header nav .burger-menu {
 }
 /* --- */
 /* pricing */
+.pricing {
+    padding: var(--section-padding);
+}
+.pricing .pricing-plans {
+    margin-top: 80px;
+    display: grid;
+    gap: 60px 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+@media (max-width: 357px) {
+    .pricing {
+        padding-inline: 0;
+    }
+}
+/* pricing card */
+.pricing .pricing-plans > div .price {
+    border-block: var(--main-color) solid 1px;
+    text-align: center;
+    padding: 30px;
+}
+.pricing .pricing-plans > div .price h1 {
+    margin: 0;
+}
+.pricing .pricing-plans > div .price span {
+    font: 13px normal;
+    text-transform: uppercase;
+}
+.pricing .pricing-plans > div .price span:first-of-type {
+    vertical-align: super;
+}
+.pricing .pricing-plans > div .price p {
+    text-transform: uppercase;
+}
+.pricing .pricing-plans > div > p {
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 20px;
+    text-transform: capitalize;
+    border-bottom: var(--main-color) solid 1px;
+    text-align: center;
+}
+.pricing .pricing-plans > div > p:last-of-type {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+/* pricing buy button */
+.pricing .pricing-plans > div button {
+    text-transform: capitalize;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+    border: var(--main-color) solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.pricing .pricing-plans > div button:hover {
+    filter: brightness(115%);
+    background-color: rgba(201, 201, 201, 0.397);
+}
