@@ -851,3 +851,18 @@ header nav .burger-menu {
     filter: brightness(115%);
     background-color: rgba(201, 201, 201, 0.397);
 }
+.pricing .container > p {
+    text-align: center;
+    margin-block: 50px 30px;
+}
+/* contact us button */
+.pricing .container > button {
+    text-transform: capitalize;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
