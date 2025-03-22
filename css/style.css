@@ -183,12 +183,12 @@ header nav ul {
     display: flex;
 }
 header nav ul li a {
-    padding: 45px 20px;
+    padding: 30px 13px;
     display: block;
     color: white;
     border-bottom: 1px solid transparent;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 14px;
     transition: .3s;
     position: relative;
     z-index: 2;
@@ -807,6 +807,9 @@ header nav .burger-menu {
     }
 }
 /* pricing card */
+.pricing .pricing-plans > div {
+    background-color: #fcfcfcfc;
+}
 .pricing .pricing-plans > div .price {
     border-block: var(--main-color) solid 1px;
     text-align: center;
@@ -828,7 +831,7 @@ header nav .burger-menu {
     text-transform: uppercase;
 }
 .pricing .pricing-plans > div > p {
-    max-width: 150px;
+    width: 150px;
     margin: 0 auto;
     padding: 20px;
     text-transform: capitalize;
@@ -836,15 +839,14 @@ header nav .burger-menu {
     text-align: center;
 }
 .pricing .pricing-plans > div > p:last-of-type {
-    max-width: 100%;
-    margin-bottom: 30px;
+    width: 100%;
 }
 /* pricing buy button */
 .pricing .pricing-plans > div button {
     text-transform: capitalize;
     padding: 10px 20px;
     display: block;
-    margin: 0 auto;
+    margin: 15px auto;
     border: var(--main-color) solid 1px;
     background-color: transparent;
     cursor: pointer;
