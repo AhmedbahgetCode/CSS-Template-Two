@@ -816,7 +816,8 @@ header nav .burger-menu {
     margin: 0;
 }
 .pricing .pricing-plans > div .price span {
-    font: 13px normal;
+    font-size: 13px;
+    font-weight: normal;
     text-transform: uppercase;
 }
 .pricing .pricing-plans > div .price span:first-of-type {
