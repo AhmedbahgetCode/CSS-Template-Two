@@ -819,6 +819,7 @@ header nav .burger-menu {
     font-size: 13px;
     font-weight: normal;
     text-transform: uppercase;
+    margin: -5px;
 }
 .pricing .pricing-plans > div .price span:first-of-type {
     vertical-align: super;
