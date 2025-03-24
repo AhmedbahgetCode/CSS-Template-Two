@@ -882,7 +882,6 @@ header nav .burger-menu {
     height: 100%;
     display: flex;
     gap: 30px;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
 }
@@ -935,3 +934,7 @@ header nav .burger-menu {
     width: 130px;
 }
 /* ----- */
+/* contact us section */
+.contact {
+    padding: var(--section-padding);
+}
