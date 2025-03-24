@@ -870,3 +870,68 @@ header nav .burger-menu {
     background-color: var(--main-color);
     cursor: pointer;
 }
+/* subscribe to our email offers */
+.email {
+    position: relative;
+    height: 250px;
+    background: url(../images/subscribe.jpg) center / cover;
+}
+.email .container {
+    position: relative;
+    color: white;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+@media (max-width: 768px) {
+    .email .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* the email form */
+.email .form {
+    border: 1px solid white;
+    position: relative;
+    min-width: 310px;
+    width: 874px;
+    flex-grow: 1;
+}
+.email .form > *:not(:nth-child(2)) {
+    position: absolute;
+}
+.email .form input[type="email"] {
+    padding: 20px;
+    padding-left: 40px;
+    background-color: transparent;
+    outline: none;
+    caret-color: white;
+    color: white;
+    border: none;
+    width: calc(100% - 130px);
+}
+.email .form input[type="email"]::placeholder {
+    text-transform: uppercase;
+    color: white;
+}
+.email .form >:first-child {
+    top: 50%;
+    transform: translate(calc(-50% + 20px),-50%);
+}
+.email .form >:last-child {
+    right: 0;
+    height: 100%;
+    border-radius: 0;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 130px;
+}
+/* ----- */
