@@ -1033,6 +1033,7 @@ footer {
     position: relative;
     background: url(../images/subscribe.jpg) center / cover;
     padding: 90px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1069,5 +1070,13 @@ footer .social ul li a {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
 }
 footer .social ul li a:hover {
+    color: var(--main-color);
+}
+footer div:last-of-type {
+    color: white;
+    text-transform: capitalize;
+    margin-top: 70px;
+}
+footer div:last-of-type span {
     color: var(--main-color);
 }
