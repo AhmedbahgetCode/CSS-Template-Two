@@ -873,6 +873,7 @@ header nav .burger-menu {
 /* subscribe to our email offers */
 .email {
     position: relative;
+    padding-inline: var(--section-padding);
     padding-block: 100px;
     background: url(../images/subscribe.jpg) center / cover;
 }
@@ -882,23 +883,22 @@ header nav .burger-menu {
     height: 100%;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
     align-items: center;
     align-content: center;
+    justify-content: space-between;
 }
-@media (max-width: 768px) {
-    .email .container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
 /* the email form */
 .email .form {
     border: 1px solid white;
     position: relative;
-    min-width: 310px;
-    width: 874px;
+    flex-basis: 45%;
+    min-width: 300px;
     flex-grow: 1;
+}
+.email p {
+    flex-grow: 1;
+    flex-basis: 40%;
 }
 .email .form > *:not(:nth-child(2)) {
     position: absolute;
@@ -932,6 +932,11 @@ header nav .burger-menu {
     padding: 10px;
     cursor: pointer;
     width: 130px;
+}
+@media (max-width: 425px) {
+    .email {
+        padding-inline: 0;
+    }
 }
 /* ----- */
 /* contact us section */
