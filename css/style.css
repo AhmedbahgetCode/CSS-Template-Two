@@ -873,7 +873,7 @@ header nav .burger-menu {
 /* subscribe to our email offers */
 .email {
     position: relative;
-    height: 250px;
+    padding-block: 100px;
     background: url(../images/subscribe.jpg) center / cover;
 }
 .email .container {
