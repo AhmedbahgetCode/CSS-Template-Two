@@ -946,6 +946,7 @@ header nav .burger-menu {
 /* form */
 .contact form {
     flex-basis: 70%;
+    max-width: 70%;
 }
 .contact form > * {
     outline: none;
@@ -958,6 +959,7 @@ header nav .burger-menu {
 }
 .contact form > *:not(:last-child) {
     width: 100%;
+    max-width: 100%;
     margin-bottom: 30px;
 }
 .contact form >:last-child {
@@ -988,6 +990,9 @@ header nav .burger-menu {
     margin-bottom: 5px;
 }
 @media (max-width: 767px) {
+    .contact form {
+        max-width: 100%;
+    }
     .contact .content {
         flex-direction: column;
         row-gap: 35px;
