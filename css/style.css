@@ -979,9 +979,14 @@ header nav .burger-menu {
     flex-basis: 25%;
     text-transform: uppercase;
 }
-.contact .info h1 {
-    font-weight: 400;
-    font-size: 22px;
+.contact .info h4 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.contact .info h4:last-of-type {
+    margin-top: 80px;
 }
 .contact .info span,
 .contact .info i {
@@ -1000,5 +1005,8 @@ header nav .burger-menu {
     .contact .content .info {
         text-align: center;
         order: -1;
+    }
+    .contact .info h4:last-of-type {
+        margin-top: 40px;
     }
 }
