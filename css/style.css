@@ -987,7 +987,7 @@ header nav .burger-menu {
 .contact .info i {
     display: block;
     color: #777;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 @media (max-width: 767px) {
     .contact form {
