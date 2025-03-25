@@ -146,7 +146,7 @@ ul.ballets li.active {
 /* scroll to top */
 .scroll-to-top {
     color: white;
-    background-color: #3797c0;
+    background-color: var(--main-color);
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -154,9 +154,9 @@ ul.ballets li.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
+    width: 45px;
     aspect-ratio: 1;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 20px;
 }
 /* ---- */
@@ -1027,4 +1027,47 @@ header nav .burger-menu {
     .contact .info h4:last-of-type {
         margin-top: 40px;
     }
+}
+/* footer section */
+footer {
+    position: relative;
+    background: url(../images/subscribe.jpg) center / cover;
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+}
+footer * {
+    position: relative;
+}
+footer h4 {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+}
+footer h4::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background-color: white;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+}
+footer .social ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .social ul li a {
+    color: white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+}
+footer .social ul li a:hover {
+    color: var(--main-color);
 }
