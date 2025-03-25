@@ -862,7 +862,7 @@ header nav .burger-menu {
 /* contact us button */
 .pricing .container > button {
     text-transform: capitalize;
-    padding: 10px 20px;
+    padding: 20px;
     display: block;
     margin: 0 auto;
     border: none;
@@ -937,4 +937,63 @@ header nav .burger-menu {
 /* contact us section */
 .contact {
     padding: var(--section-padding);
+}
+.contact .content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+/* form */
+.contact form {
+    flex-basis: 70%;
+}
+.contact form > * {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.contact form ::placeholder {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.contact form > *:not(:last-child) {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact form >:last-child {
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+}
+.contact form >:nth-last-child(2) {
+    height: 200px;
+}
+/* titles info */
+.contact .content .info {
+    flex-basis: 25%;
+    text-transform: uppercase;
+}
+.contact .info h1 {
+    font-weight: 400;
+    font-size: 22px;
+}
+.contact .info span,
+.contact .info i {
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+        row-gap: 35px;
+    }
+    .contact .content .info {
+        text-align: center;
+        order: -1;
+    }
 }
